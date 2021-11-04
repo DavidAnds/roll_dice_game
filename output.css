@@ -22356,6 +22356,10 @@ video {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+.font-lato {
+  font-family: Lato, sans-serif;
+}
+
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
@@ -31878,6 +31882,16 @@ video {
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bg-game {
+  background: rgb(243,244,246);
+  background: linear-gradient(90deg, rgba(243,244,246,1) 50%, rgba(255,255,255,1) 50%);
+}
+
+.bg-back {
+  background: rgb(173,156,130);
+  background: linear-gradient(120deg, rgba(173,156,130,1) 0%, rgba(164,118,69,1) 100%);
 }
 
 @media (min-width: 640px) {
@@ -53594,6 +53608,10 @@ video {
 
   .sm\:font-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .sm\:font-lato {
+    font-family: Lato, sans-serif;
   }
 
   .sm\:text-xs {
@@ -84824,6 +84842,10 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .md\:font-lato {
+    font-family: Lato, sans-serif;
+  }
+
   .md\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -116050,6 +116072,10 @@ video {
 
   .lg\:font-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .lg\:font-lato {
+    font-family: Lato, sans-serif;
   }
 
   .lg\:text-xs {
@@ -147280,6 +147306,10 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .xl\:font-lato {
+    font-family: Lato, sans-serif;
+  }
+
   .xl\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -178508,6 +178538,10 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .\32xl\:font-lato {
+    font-family: Lato, sans-serif;
+  }
+
   .\32xl\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -188018,14 +188052,4 @@ video {
   .\32xl\:ease-in-out {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
-}
-
-h2 {
-  font-size: 24px;
-  color: pink;
-}
-
-.style-de-ber{
-  font-weight: bold;
-  margin: 50px;
 }
