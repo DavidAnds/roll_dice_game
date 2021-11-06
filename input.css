@@ -2,7 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-.titre {
-    font-size: 20px;
-    
+.bg-game {
+    background: rgb(243,244,246);
+    background: linear-gradient(90deg, rgba(243,244,246,1) 50%, rgba(255,255,255,1) 50%);
+}
+
+.bg-back {
+    background: rgb(173,156,130);
+    background: linear-gradient(120deg, rgba(173,156,130,1) 0%, rgba(164,118,69,1) 100%);
+}
+
+.active-point {
+    display: none;
+}
+
+.active h2 {
+    @apply font-medium text-gray-700
+}
+
+.active .active-point {
+    display: block;
+}
+
+.active .global {
+    @apply text-red-500
 }

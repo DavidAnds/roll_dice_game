@@ -31894,6 +31894,25 @@ video {
   background: linear-gradient(120deg, rgba(173,156,130,1) 0%, rgba(164,118,69,1) 100%);
 }
 
+.active-point {
+  display: none;
+}
+
+.active h2 {
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgba(55, 65, 81, var(--tw-text-opacity))
+}
+
+.active .active-point {
+  display: block;
+}
+
+.active .global {
+  --tw-text-opacity: 1;
+  color: rgba(239, 68, 68, var(--tw-text-opacity))
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

@@ -10,61 +10,76 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./output.css">
 </head>
-<body class="bg-back h-screen font-lato">
-
+<body class="bg-back h-screen font-lato relative">
+    <!-- Game rules -->
+   
+    <!-- Game -->
     <div class="bg-game shadow-xl pt-20 pb-20 px-4 mx-auto max-w-screen-lg relative md:px-16 lg:px-20 xl:mt-1">
-        <button class="flex justify-center items-center mx-auto text-red-500 hover:text-red-400">
+        <!-- Button to start the game -->
+        <button id="btn-new-game" class="flex justify-center items-center mx-auto text-red-500 hover:text-red-400">
             <img src="./img/plus.png" alt="a plus icon" class="w-5 sm:w-7">
             <p class="uppercase text-base ml-2 sm:text-xl sm:ml-4">New game</p>
          </button>
 
-         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-2xl">
-            <img src="./img/dice-1.png" alt="icon de la face 3 d'un dés" class="w-20 sm:w-28">
+         <!-- Dice img -->
+         <div id="dice" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-2xl">
+            
          </div>
 
+         
          <div class="flex justify-between items-center mt-10">
-             <div class="text-center w-40 sm:w-64">
-                 <div class="flex justify-center items-center">
-                     <h2 class="uppercase text-2xl tracking-widest  text-gray-700 sm:text-4xl">Player 1</h2>
-                     <div class="w-5 h-5 rounded-full bg-red-500 ml-2 sm:ml-4"></div>
+             <!-- Player 1 -->
+             <div id="player-1" class="text-center w-40 sm:w-64">
+                 <!-- Player 1 name -->
+                 <div class="name flex justify-center items-center">
+                     <h2 class="uppercase text-2xl tracking-widest font-light text-gray-500 sm:text-4xl">Player 1</h2>
+                     <div class="active-point w-5 h-5 rounded-full bg-red-500 ml-2 sm:ml-4"></div>
                  </div>
-                 <p class="mt-4 text-6xl text-red-500 font-light sm:text-7xl">72</p>
+                 <!-- Player 1 global score -->
+                 <p class="global mt-4 text-6xl text-red-300 font-light sm:text-7xl">72</p>
+                 <!-- Player 1 current score -->
                  <div class="py-1 px-2 bg-red-500 text-center inline-block mt-60 sm:py-2 sm:px-4">
                     <p class="uppercase tracking-tight font-bold text-gray-900">Current</p>
-                    <p class="text-white text-xl sm:mt-2">12</p>
+                    <p class="current text-white text-xl sm:mt-2">0</p>
                 </div>
              </div>
-
-             <div class="text-center w-36 sm:w-60">
-                <div class="flex justify-center items-center">
-                    <h2 class="uppercase text-2xl tracking-widest font-light text-gray-500 sm:text-4xl">Player 2</h2>
-                    <div class="hidden w-5 h-5 rounded-full bg-red-500 ml-2"></div>
+             <!-- Player 1 end -->
+            
+             <!-- Player 2 -->
+             <div id="player-2" class="text-center w-40 sm:w-64">
+                 <!-- Player 2 name -->
+                <div class="name flex justify-center items-center">
+                    <div class="active-point w-5 h-5 rounded-full bg-red-500"></div>
+                    <h2 class="uppercase text-2xl tracking-widest font-light text-gray-500 ml-2 sm:text-4xl">Player 2</h2>   
                 </div>
-                <p class="mt-4 text-6xl text-red-300 font-light sm:text-7xl">72</p>
+                <!-- Player 2 global score -->
+                <p class="global mt-4 text-6xl text-red-300 font-light sm:text-7xl">72</p>
+                <!-- Player 2 current score -->
                 <div class="py-1 px-2 bg-red-500 text-center inline-block mt-60 sm:py-2 sm:px-4">
                    <p class="uppercase tracking-tight font-bold text-gray-900">Current</p>
-                   <p class="text-white text-xl sm:mt-2">12</p>
+                   <p class="current text-white text-xl sm:mt-2">0</p>
                </div>
             </div>
+            <!-- Player 2 end -->
          </div>
 
          <div class="absolute top-96 left-1/2 transform -translate-x-1/2 sm:top-3/4 ">
              <div>
-                <button class="flex justify-center items-center mx-auto text-red-500 hover:text-red-400">
+                 <!-- Button to roll a dice -->
+                <button id="roll-dice-btn" class="flex justify-center items-center mx-auto text-red-500 hover:text-red-400">
                     <img src="./img/refresh-arrow.png" alt="icon of a refresh arrow" class="w-6 sm:w-8">
                     <p class="uppercase text-base ml-2 sm:text-xl sm:ml-4">Roll dice</p>
                  </button>
 
-                 <button class="flex justify-center items-center mx-auto text-red-500 hover:text-red-400 mt-4 sm:mt-4">
+                 <!-- Button to hold the current -->
+                 <button id="hold-btn" class="flex justify-center items-center mx-auto text-red-500 hover:text-red-400 mt-4 sm:mt-4">
                     <img src="./img/download.png" alt="donwload icon" class="w-5 sm:w-7">
                     <p class="uppercase text-base ml-2 sm:text-xl sm:ml-4">Hold</p>
                  </button>
              </div>
         </div>
-
-
-
     </div>
     
+    <script src="./app.js"></script>
 </body>
 </html>

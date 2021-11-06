@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "postcss build input.css -o output.css"
+    "build": "postcss build input.css -o output.css",
+    "watch": "postcss build input.css -o output.css --watch"
   },
   "author": "",
   "license": "ISC",
