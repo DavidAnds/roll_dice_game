@@ -12,6 +12,9 @@ const newGameBtn = document.getElementById('btn-new-game')
 const rollDiceBtn = document.getElementById('roll-dice-btn')
 const holdBtn = document.getElementById('hold-btn')
 const diceFace = document.getElementById('dice')
+const gameRules = document.getElementById('game-rules')
+const continuBtn = document.getElementById('continu-btn')
+const gameRulesBtn = document.getElementById('game-rules-btn')
 
 const startNewGame = () => {
     // Remise des scores à 0
@@ -22,6 +25,7 @@ const startNewGame = () => {
     player2.querySelector('.global').innerHTML = globalPlayer2
     player1.querySelector('.current').innerText = current
     player2.querySelector('.current').innerText = current
+    diceFace.innerHTML = ''
 
     // Début nouvelle partie 
     gameOn = true 
@@ -109,10 +113,13 @@ const holdScore = () => {
         player1.querySelector('.current').innerText = current
 
         // Verifition global
-        if(globalPlayer1 >= 100) {
+        if(globalPlayer1 >= 2) {
+            diceFace.innerHTML = `
+            <div class="text-center bg-red-500 w-72 px-2 py-8 transform bg-opacity-60">
+                <p class="text-xl">🎉  Player 1 you've won  🎉</p>
+                <iframe src="https://giphy.com/embed/g9582DNuQppxC" class="w-60 mt-6 mx-auto" allowFullScreen></iframe>
+            </div>`
             gameOn = false
-            player2Turn = false
-            player1Turn = false
         } else {
             player2Turn = true
             player1Turn = false
@@ -135,6 +142,11 @@ const holdScore = () => {
         // Verification global
         if(globalPlayer2 >= 100) {
             gameOn = false
+            diceFace.innerHTML = `
+            <div class="text-center bg-red-500 w-72 px-2 py-8 transform bg-opacity-60">
+                <p class="text-xl">🎉  Player 2 you've won  🎉</p>
+                <iframe src="https://giphy.com/embed/g9582DNuQppxC" class="w-60 mt-6 mx-auto" allowFullScreen></iframe>
+            </div>`
         } else {
             player2Turn = false
             player1Turn = true
@@ -144,9 +156,21 @@ const holdScore = () => {
     }
 }
 
+// Game's rules
+const continu = () => {
+    gameRules.classList.add('hidden')
+}
 
+// Show game's rules
+const showGameRules = () => {
+    gameRules.classList.remove('hidden')
+}
 
 newGameBtn.addEventListener('click', startNewGame)
 rollDiceBtn.addEventListener('click', rollDice)
 holdBtn.addEventListener('click', holdScore)
+continuBtn.addEventListener('click', continu)
+gameRulesBtn.addEventListener('click', showGameRules)
+
+
 
