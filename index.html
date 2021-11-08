@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="./output.css">
 </head>
 <body class="bg-back h-screen font-lato relative flex justify-center items-center">
+    <div class="absolute z-40">
+        <h2 id="info" class="hidden text-6xl uppercase font-bold bg-gradient-to-r from-yellow-400 via-red-400 to-red-500 bg-clip bg-clip-text text-transparent">NEW GAME start</h2>
+    </div>
     <!-- Game rules -->
     <div id="game-rules" class=" hidden absolute bg-red-500 bg-opacity-30 z-50 h-full w-full right-0 bottom-0 flex items-center justify-center shadow-xl">
         <div class="bg-white w-11/12 max-w-2xl py-5 px-4 rounded-lg sm:px-10">
@@ -75,7 +78,7 @@
                      <div class="active-point w-5 h-5 rounded-full bg-red-500 ml-2 sm:ml-4"></div>
                  </div>
                  <!-- Player 1 global score -->
-                 <p class="global mt-4 text-6xl text-red-300 font-light sm:text-7xl">72</p>
+                 <p class="global mt-4 text-6xl text-red-300 font-light sm:text-7xl">0</p>
                  <!-- Player 1 current score -->
                  <div class="py-1 px-2 bg-red-500 text-center inline-block mt-60 sm:py-2 sm:px-4">
                     <p class="uppercase tracking-tight font-bold text-gray-900">Current</p>
@@ -92,7 +95,7 @@
                     <h2 class="uppercase text-2xl tracking-widest font-light text-gray-500 ml-2 sm:text-4xl">Player 2</h2>   
                 </div>
                 <!-- Player 2 global score -->
-                <p class="global mt-4 text-6xl text-red-300 font-light sm:text-7xl">72</p>
+                <p class="global mt-4 text-6xl text-red-300 font-light sm:text-7xl">0</p>
                 <!-- Player 2 current score -->
                 <div class="py-1 px-2 bg-red-500 text-center inline-block mt-60 sm:py-2 sm:px-4">
                    <p class="uppercase tracking-tight font-bold text-gray-900">Current</p>
