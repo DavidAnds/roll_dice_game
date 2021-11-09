@@ -26,7 +26,6 @@ const startNewGame = () => {
     player1.querySelector('.current').innerText = current
     player2.querySelector('.current').innerText = current
     diceFace.innerHTML = ''
-
     info.classList.remove('hidden')
     info.innerText = "New game start"
     setTimeout(() => {
@@ -56,31 +55,30 @@ const turnChange = () => {
             player1.classList.remove('active')
             player2.classList.add('active')
             player1Turn = false
-            player2Turn = true 
         } else {
             player1.classList.add('active')
             player2.classList.remove('active')
             player1Turn = true
-            player2Turn = false
         }
-    }
-    ,1500)
+    },1500)
 }
 
+// Game end
 const gameEnd = (player) => {
     gameOn = false
      diceFace.innerHTML = `
-         <div class="text-center bg-red-500 w-72 px-2 py-8 transform bg-opacity-60">
+         <div class="text-center bg-red-500 w-72 px-2 py-8 bg-opacity-60">
             <p class="text-xl">🎉  ${player} you've won  🎉</p>
             <iframe src="https://giphy.com/embed/g9582DNuQppxC" class="w-60 mt-6 mx-auto" allowFullScreen></iframe>
         </div>`
 }
 
-// Lancer de dés
+// Dice roll
 const rollDice = () => {
     if(gameOn){
         const diceNumber = Math.floor(Math.random()*6 + 1 )
         diceFace.innerHTML = `<img src="./img/dice-${diceNumber}.png" alt="icon de la face ${diceNumber} d'un dés" class="w-20 sm:w-28">`
+
 
         if(diceNumber !== 1){
             current += diceNumber
@@ -107,16 +105,15 @@ const rollDice = () => {
 
 }
 
-// Augmenter le score global 
+//  increase the global score
 const holdScore = () => {
-    // Pour le joueur 1
+    // For player 1
     if(gameOn & player1Turn) {
         globalPlayer1 += current
         current = 0
         player1.querySelector('.global').innerHTML = globalPlayer1
         player1.querySelector('.current').innerText = current
 
-        // Verifition global
         if(globalPlayer1 >= 100) {
             gameEnd("Player 1")
 
@@ -125,14 +122,13 @@ const holdScore = () => {
             return
         }
 
-    // Pour le joueur 2
-    } else if (gameOn ) {
+    // For player 2
+    } else if (gameOn) {
         globalPlayer2 += current
         current = 0
         player2.querySelector('.global').innerHTML = globalPlayer2
         player2.querySelector('.current').innerText = current
  
-        // Verification global
         if(globalPlayer2 >= 100) {
             gameEnd('Player 2')
             

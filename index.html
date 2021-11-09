@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="A dice roll game">
+    <title>Dice Game</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./output.css">
 </head>
 <body class="bg-back h-screen font-lato relative flex justify-center items-center">
+    <!-- Info -->
     <div class="absolute z-40">
-        <h2 id="info" class="hidden text-6xl uppercase font-bold bg-gradient-to-r from-yellow-400 via-red-400 to-red-500 bg-clip bg-clip-text text-transparent">NEW GAME start</h2>
+        <h2 id="info" class="hidden text-4xl uppercase font-bold bg-gradient-to-r from-yellow-400 via-red-400 to-red-500 bg-clip bg-clip-text text-transparent sm:text-6xl">New game start</h2>
     </div>
+
     <!-- Game rules -->
     <div id="game-rules" class=" hidden absolute bg-red-500 bg-opacity-30 z-50 h-full w-full right-0 bottom-0 flex items-center justify-center shadow-xl">
         <div class="bg-white w-11/12 max-w-2xl py-5 px-4 rounded-lg sm:px-10">
@@ -51,9 +54,6 @@
             </button>
         </div>
     </div>
-
-   
-
    
     <!-- Game -->
     <div class="bg-game shadow-xl pt-20 pb-20 px-4 w-11/12 max-w-screen-lg relative md:px-16 lg:px-20 xl:mt-1">
@@ -65,10 +65,9 @@
 
          <!-- Dice img -->
          <div id="dice" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-2xl z-30">
-            
          </div>
 
-         
+         <!-- Command -->
          <div class="flex justify-between items-center mt-10">
              <!-- Player 1 -->
              <div id="player-1" class="text-center w-40 sm:w-64">
